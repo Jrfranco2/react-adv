@@ -20,12 +20,17 @@ const ShoppingPage = () => {
         key={product.id}
         initialValues={{
           count: 4,
-          maxCount: 10,
+          maxCount: 15,
         }}
       >
-        <ProductImage className="custom-image" />
-        <ProductTitle className="text-white" />
-        <ProductButtons className="custom-buttons" />
+        {({ reset }) => (
+          <>
+            <ProductImage className="custom-image" />
+            <ProductTitle className="text-white" />
+            <ProductButtons className="custom-buttons" />
+            <button onClick={reset}>Reset</button>
+          </>
+        )}
       </ProductCard>
     </div>
   );
