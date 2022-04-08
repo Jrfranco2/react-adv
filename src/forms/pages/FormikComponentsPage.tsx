@@ -12,6 +12,8 @@ const FormikComponentsPage = () => {
           firstName: "",
           lastName: "",
           email: "",
+          terms: false,
+          jobType: "",
         }}
         onSubmit={(values) => console.log(values)}
         validationSchema={Yup.object({
@@ -24,10 +26,15 @@ const FormikComponentsPage = () => {
           email: Yup.string()
             .required("Required")
             .email("Invalid email address"),
+          terms: Yup.boolean().oneOf(
+            [true],
+            "Please, accept terms && conditions"
+          ),
+          jobType: Yup.string().required("Required"),
         })}
       >
         {() => (
-          <Form noValidate>
+          <Form>
             <label htmlFor="firstName">First Name</label>
             <Field
               name="firstName"
@@ -54,6 +61,22 @@ const FormikComponentsPage = () => {
               id="email"
             />
             <ErrorMessage name="email" component="span" />
+
+            <label htmlFor="jobType">Job Type</label>
+            <Field name="jobType" id="jobType" as="select">
+              <option value="">Pick a job...</option>
+              <option value="FrontEnd Developer">FrontEnd Developer</option>
+              <option value="Designer">Designer</option>
+              <option value="BackEnd Developer">BackEnd Developer</option>
+              <option value="DevOps">DevOps</option>
+            </Field>
+            <ErrorMessage name="jobType" component="span" />
+
+            <label htmlFor="terms">
+              <Field name="terms" type="checkbox" id="terms" />
+              Terms && Conditions
+            </label>
+            <ErrorMessage name="terms" component="span" />
 
             <button type="submit">Submit</button>
           </Form>
