@@ -63,6 +63,7 @@ const ShoppingPage = () => {
             className="bg-dark text-white"
             key={product.id}
             onChange={onProductCountChange}
+            value={shoppingCart[product.id]?.count || 0}
           >
             <ProductImage className="custom-image" />
             <ProductTitle className="text-white" />
@@ -77,14 +78,16 @@ const ShoppingPage = () => {
             product={product}
             className="bg-dark text-white"
             style={{ width: "100px" }}
+            value={product.count}
+            onChange={onProductCountChange}
           >
             <ProductImage className="custom-image" />
-            <ProductButtons className="custom-buttons" />
+            <ProductButtons
+              className="custom-buttons"
+              style={{ display: "flex", justifyContent: "center" }}
+            />
           </ProductCard>
         ))}
-      </div>
-      <div>
-        <code>{JSON.stringify(shoppingCart, null, 5)}</code>
       </div>
     </div>
   );
