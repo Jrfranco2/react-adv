@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, NavLink, Navigate } from "react-router-dom";
+import FormikAbstractionPage from "../forms/pages/FormikAbstractionPage";
 import FormikBasicPage from "../forms/pages/FormikBasicPage";
 import FormikComponentsPage from "../forms/pages/FormikComponentsPage";
 import FormikYupPage from "../forms/pages/FormikYupPage";
@@ -46,6 +47,14 @@ export const Navigation = () => {
                 Formik Components
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/formik-abstraction"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
+                Formik Abstraction
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
@@ -55,6 +64,10 @@ export const Navigation = () => {
           <Route path="formik-basic" element={<FormikBasicPage />} />
           <Route path="formik-yup" element={<FormikYupPage />} />
           <Route path="formik-components" element={<FormikComponentsPage />} />
+          <Route
+            path="formik-abstraction"
+            element={<FormikAbstractionPage />}
+          />
 
           <Route path="/*" element={<Navigate to="/home" replace />} />
         </Routes>
