@@ -5,6 +5,7 @@ import {
   ProductTitle,
 } from "../components";
 import { products } from "../data/products";
+import App from "../../App";
 
 const product = products[0];
 
@@ -23,12 +24,19 @@ const ShoppingPage = () => {
           maxCount: 15,
         }}
       >
-        {({ reset }) => (
+        {({ reset, count, increaseBy, isMaxCountReached, maxCount }) => (
           <>
             <ProductImage className="custom-image" />
             <ProductTitle className="text-white" />
             <ProductButtons className="custom-buttons" />
             <button onClick={reset}>Reset</button>
+            <button onClick={() => increaseBy(-2)}>-2</button>
+            {!isMaxCountReached && (
+              <button onClick={() => increaseBy(+2)}>+2</button>
+            )}
+            <span>
+              {count} - {maxCount}
+            </span>
           </>
         )}
       </ProductCard>
