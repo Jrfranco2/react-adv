@@ -1,10 +1,12 @@
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, NavLink, Navigate } from "react-router-dom";
-import FormikAbstractionPage from "../forms/pages/FormikAbstractionPage";
-import FormikBasicPage from "../forms/pages/FormikBasicPage";
-import FormikComponentsPage from "../forms/pages/FormikComponentsPage";
-import FormikYupPage from "../forms/pages/FormikYupPage";
-import RegisterPage from "../forms/pages/RegisterPage";
+import {
+  FormikBasicPage,
+  FormikAbstractionPage,
+  FormikComponentsPage,
+  FormikYupPage,
+  RegisterPage,
+} from "../forms/pages";
 
 import logo from "../logo.svg";
 

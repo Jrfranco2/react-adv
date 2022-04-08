@@ -1,8 +1,6 @@
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
-import MyChechbox from "../components/MyChechbox";
-import MySelect from "../components/MySelect";
-import MyTextInput from "../components/MyTextInput";
+import { MyChechbox, MySelect, MyTextInput } from "../components";
 import "../styles/styles.css";
 
 const FormikAbstractionPage = () => {
