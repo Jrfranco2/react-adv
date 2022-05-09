@@ -1,0 +1,100 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "id": "firstName",
+    "label": "First Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": "5"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "id": "lastName",
+    "label": "Last Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "id": "email",
+    "label": "Email",
+    "placeholder": "email@email.com",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "email"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "id": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      {
+        "id": "1",
+        "label": "League of Legends"
+      },
+      {
+        "id": "2",
+        "label": "Counter Strike"
+      },
+      {
+        "id": "3",
+        "label": "Dota 2"
+      },
+      {
+        "id": "4",
+        "label": "Overwatch"
+      },
+      {
+        "id": "5",
+        "label": "Hearthstone"
+      },
+      {
+        "id": "6",
+        "label": "StarCraft"
+      },
+      {
+        "id": "7",
+        "label": "StarCraft II"
+      },
+      {
+        "id": "8",
+        "label": "World of Warcraft"
+      },
+      {
+        "id": "9",
+        "label": "Call of Duty"
+      },
+      {
+        "id": "10",
+        "label": "Other"
+      }
+    ],
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  }
+]

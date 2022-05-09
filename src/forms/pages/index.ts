@@ -4,12 +4,14 @@ import FormikComponentsPage from "./FormikComponentsPage";
 import FormikYupPage from "./FormikYupPage";
 import RegisterPage from "./RegisterPage";
 import RegisterFormikPage from "./RegisterFormikPage";
+import DynamicFormPage from "./DynamicFormPage";
 
 export {
+  DynamicFormPage,
   FormikAbstractionPage,
   FormikBasicPage,
   FormikComponentsPage,
   FormikYupPage,
-  RegisterPage,
   RegisterFormikPage,
+  RegisterPage,
 };

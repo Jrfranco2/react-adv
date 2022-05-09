@@ -4,7 +4,7 @@ interface Props {
   label: string;
   name: string;
   id: string;
-  type?: "text" | "email" | "password";
+  type?: "text" | "email" | "password" | any;
   placeholder?: string;
   [x: string]: any;
 }
